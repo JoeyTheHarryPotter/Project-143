@@ -61,7 +61,7 @@ function draw(){
   if(rightWrist_score > 0.2){
     fill('#ff0000');
     stroke('#ff0000');
-    circle(rightWristX, rightWristY, 20);
+    circle(rightWristX + 225, rightWristY, 15);
   }
 
   if(status == "start"){
