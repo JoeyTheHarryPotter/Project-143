@@ -39,13 +39,14 @@ function setup(){
 
 	video = createCapture(VIDEO);
 	video.size(600, 300);
-
+  video.hide();
 	poseNet = ml5.poseNet(video, modelLoaded);
 	poseNet.on('pose', gotPoses);
 }
 
 
 function draw(){
+  paddleInCanvas();
   background(0);
 
   image(video, 0, 0, 1240, 336);
@@ -66,7 +67,6 @@ function draw(){
 
   if(status == "start"){
     //funtion paddleInCanvas call 
-    paddleInCanvas();
  
     //left paddle
     fill(250,0,0);
